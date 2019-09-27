@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function()
+  {
+  $("#trains_css").hide();
+  $("#trains_js").hide();
+  $("#xo_css").hide();
+  $("#xo_js").hide();
+  $("#html").mouseenter(function(){
+    $("#html").attr("src","htmly.png");
+  });
+  $("#css").mouseenter(function(){
+    $("#css").attr("src","cssy.png")
+  });
+  $("#js").mouseenter(function(){
+    $("#js").attr("src","jsy.png")
+  });
+  $("#html").mouseleave(function(){
+    $("#html").attr("src","htmlo.png")
+  });
+  $("#css").mouseleave(function(){
+    $("#css").attr("src","csso.png")
+  });
+  $("#js").mouseleave(function(){
+    $("#js").attr("src","jso.png")
+
+  });
+  $("#trains_html_tab").click(function(){
+    $("#trains_html").show();
+    $("#trains_html_tab").addClass("active")
+    $("#trains_css").hide();
+    $("#trains_css_tab").removeClass("active")
+    $("#trains_js").hide();
+    $("#trains_js_tab").removeClass("active")});
+  $("#trains_css_tab").click(function(){
+    $("#trains_css").show();
+    $("#trains_css_tab").addClass("active")
+    $("#trains_html").hide();
+    $("#trains_html_tab").removeClass("active")
+    $("#trains_js").hide();
+    $("#trains_js_tab").removeClass("active")
+  });
+  $("#trains_js_tab").click(function(){
+    $("#trains_js").show();
+    $("#trains_js_tab").addClass("active")
+    $("#trains_css").hide();
+    $("#trains_css_tab").removeClass("active")
+    $("#trains_html").hide();
+    $("#trains_html_tab").removeClass("active")
+  });
+  $("#xo_html_tab").click(function(){
+    $("#xo_html").show();
+    $("#xo_html_tab").addClass("active")
+    $("#xo_css").hide();
+    $("#xo_css_tab").removeClass("active")
+    $("#xo_js").hide();
+    $("#xo_js_tab").removeClass("active")});
+  $("#xo_css_tab").click(function(){
+    $("#xo_css").show();
+    $("#xo_css_tab").addClass("active")
+    $("#xo_html").hide();
+    $("#xo_html_tab").removeClass("active")
+    $("#xo_js").hide();
+    $("#xo_js_tab").removeClass("active")});
+  $("#xo_js_tab").click(function(){
+    $("#xo_js").show();
+    $("#xo_js_tab").addClass("active")
+    $("#xo_css").hide();
+    $("#xo_css_tab").removeClass("active")
+    $("#xo_html").hide();
+    $("#xo_html_tab").removeClass("active")});
+  });
+  </script>
+</head>
+<body style="background-color:#EFDECB">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      <i>  <b style="color:#FF6600; text-shadow:10px 10px #FFCC99">Ayah Alrifai</b> </i>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#"  style="color:#FF6600"><b id="home">Home</b></a></li>
+        <li><a href="#"  style="color:#FF6600"><b id="about">about</b></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" style="color:#FF6600"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" style="color:#FF6600"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators" >
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="11.jpg">
+    </div>
+    <div class="item">
+      <img src="44.jpg">
+    </div>
+    <div class="item">
+      <img src="22.jpg">
+    </div>
+    <div class="item">
+      <img src="33.jpg">
+    </div>
+    <div class="item">
+      <img src="55.jpg">
+    </div>
+  </div>
+</div>
+<div class="row" style="margin-left:10%">
+  <div class="col-sm-4"><img id="html" src="htmlo.png" width="50%"></div>
+  <div class="col-sm-4"><img id="css" src="csso.png" width="50%"></div>
+  <div class="col-sm-4"><img id="js" src="jso.png" width="50%"></div>
+</div>
+<div style="background:#000000;margin:5%;border-width:5px;border-style:solid;border-color:#FF6600;">
+  <p style="color:#FF6600;font-size:1.5em;text-align:center;">Trains Game (one player)</p>
+  <hr style="margin-bottom:0px">
+  <ul class="nav nav-tabs">
+    <li id="trains_html_tab" class="active"><a style="color:#FF6600;">HTML</a></li>
+    <li id="trains_css_tab"><a style="color:#FF6600;">CSS</a></li>
+    <li id="trains_js_tab"><a style="color:#FF6600;">JS</a></li>
+  </ul>
+  <pre id="trains_html" style="background:#000000;color:#ffffff;font-size:1em;">
+    <iframe src="trains.mp4" style="float:right"></iframe>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en" dir="ltr"&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Ayah K Alrifai&lt;/title&gt;
+    &lt;link rel = "stylesheet"
+    type = "text/css"\nhref = "/home/ayah/Desktop/trains/train.css"/&gt;
+    &lt;/head&gt;
+    &lt;!--background:-webkit-radial-gradient(top right,#9EF2A7,#F59A8C,#9EF2A7);--&gt;
+    &lt;body style="background-image: url('/home/ayah/Desktop/trains/bg3.jpg');"&gt;
+    &lt;img src="/home/ayah/Desktop/trains/arrow.png" alt="back" onclick="back()" width="100px" height="70px"&gt;
+    &lt;div id="win"&gt;&lt;/div&gt;
+    &lt;div class="h" style="top:50px"&gt;&lt;/div&gt;
+    &lt;div class="h" style="top:350px"&gt;&lt;/div&gt;
+    &lt;div class="h" style="top:650px"&gt;&lt;/div&gt;
+    &lt;div class="v" style="left:290px"&gt;&lt;/div&gt;
+    &lt;div class="v" style="left:590px"&gt;&lt;/div&gt;
+    &lt;div class="v" style="left:890px"&gt;&lt;/div&gt;
+      &lt;div class="circle" style="left:265px;top:25px;"  id="c1">&lt;/div&gt;
+      &lt;div class="circle" style="left:265px;top:325px;" id="c4">&lt;/div&gt;
+      &lt;div class="circle" style="left:265px;top:625px;" id="c7">&lt;/div&gt;
+      &lt;div class="circle" style="left:567px;top:25px;;" id="c2">&lt;/div&gt;
+      &lt;div class="circle" style="left:567px;top:325px;" id="c5">&lt;/div&gt;
+      &lt;div class="circle" style="left:567px;top:625px;" id="c8">&lt;/div&gt;
+      &lt;div class="circle" style="left:867px;top:25px;"  id="c3">&lt;/div&gt;
+      &lt;div class="circle" style="left:867px;top:325px;" id="c6">&lt;/div&gt;
+      &lt;div class="circle" style="left:867px;top:625px;" id="c9">&lt;/div&gt;
+      &lt;p draggable="true" class="stone1" style="left:120px;top:325px;"  id="1"&gt;&lt;/p&gt;
+      &lt;p draggable="true" class="stone1" style="left:120px;top:325px;"  id="2"&gt;&lt;/p&gt;
+      &lt;p draggable="true" class="stone1" style="left:120px;top:325px;"  id="3"&gt;&lt;/p&gt;
+      &lt;p draggable="true" class="stone2" style="left:1035px;top:325px;" id="4"&gt;&lt;/p&gt;
+      &lt;p draggable="true" class="stone2" style="left:1035px;top:325px;" id="5"&gt;&lt;/p&gt;
+      &lt;p draggable="true" class="stone2" style="left:1035px;top:325px;" id="6"&gt;&lt;/p&gt;
+      &lt;script type="text/javascript" src="/home/ayah/Desktop/trains/1player.js"&gt;
+      &lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+  </pre>
+  <pre id="trains_css" style="background:#000000;color:#ffffff;font-size:1em;">
+  <iframe src="trains.mp4" style="float:right;"></iframe>
+  .form
+    {
+  position: fixed;
+  top:25%;
+  left: 30%;
+  width: 40%;
+  border-width: 4px;
+  border-color: #000000;
+  border-style: dashed;
+  font-size: 2em;
+  color: #000000;
+  background:-webkit-radial-gradient(top right,#751CE8,#BF0EA1,#054AA5);
+  opacity: 0.85;
+}
+  .button
+    {
+  width: 75px;
+  font-size: 1em;
+  background-color: #751CE8;
+  margin-left: 200px;
+  margin-bottom: 20px;
+  border-color: #000000;
+  border-radius: 25%;
+}
+  .h
+    {
+  position: fixed;
+  width: 600px;
+  height: 10px;
+  left: 290px;
+  background-color: #000000;
+}
+  .v
+    {
+  position:fixed;
+  width: 10px;
+  height: 600px;
+  top:50px;
+  background-color: #000000;
+}
+  .circle
+    {
+  position:fixed;
+  width:50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #000000;
+}
+  .stone1
+    {
+  position:fixed;
+  width:50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #00FF00;
+  z-index: 1;
+}
+  .stone2
+    {
+  position:fixed;
+  width:50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #FF0000;
+  z-index: 1;
+}
+  .win
+    {
+  position:fixed;
+  top:200px;
+  left:290px;
+  background:-webkit-radial-gradient(top right,#751CE8,#BF0EA1,#054AA5);
+  border-width: 3px;
+  border-color: #000000;
+  border-style: groove;
+  color:#FFFFFF;
+  width:600px;
+  height: 150px;
+  border-radius: 100px;
+  font-size: 4em;
+  z-index: 2;
+  text-align: center;
+  padding-top: 50px;
+  opacity: 0.80;
+
+}
+  input[type=radio]
+    {
+  height:1.5em;
+  width:30%;
+  color: #000000;
+
+}
+  </pre>
+  <pre id="trains_js" style="background:#000000;color:#ffffff;font-size:1em;">
+  <iframe src="trains.mp4" style="float:right;"></iframe>
+  var count=0;
+var initial_node=[] ;
+initial_node["state"]={"c1":0,"c2":0,"c3":0,"c4":0,"c5":0,"c6":0,"c7":0,"c8":0,"c9":0};
+initial_node["id"]={"c1":0,"c2":0,"c3":0,"c4":0,"c5":0,"c6":0,"c7":0,"c8":0,"c9":0};
+initial_node["actionto"]=0;
+initial_node["actionid"]=0;
+initial_node["cost"]=0;
+var depth=4;
+function back()
+{
+  location.assign("/home/ayah/Desktop/trains/base.html")
+}
+function new_game()
+{
+document.body.innerHTML='&lt;!DOCTYPE html&gt;
+  &lt;html lang="en" dir="ltr"&gt;
+  &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Ayah K Alrifai&lt;/title&gt;
+  &lt;link rel = "stylesheet"
+  type = "text/css"\nhref = "/home/ayah/Desktop/trains/train.css"/&gt;
+  &lt;/head&gt;
+  &lt;!--background:-webkit-radial-gradient(top right,#9EF2A7,#F59A8C,#9EF2A7);--&gt;
+  &lt;body style="background-image: url('/home/ayah/Desktop/trains/bg3.jpg');"&gt;
+  &lt;img src="/home/ayah/Desktop/trains/arrow.png" alt="back" onclick="back()" width="100px" height="70px"&gt;
+  &lt;div id="win"&gt;&lt;/div&gt;
+  &lt;div class="h" style="top:50px"&gt;&lt;/div&gt;
+  &lt;div class="h" style="top:350px"&gt;&lt;/div&gt;
+  &lt;div class="h" style="top:650px"&gt;&lt;/div&gt;
+  &lt;div class="v" style="left:290px"&gt;&lt;/div&gt;
+  &lt;div class="v" style="left:590px"&gt;&lt;/div&gt;
+  &lt;div class="v" style="left:890px"&gt;&lt;/div&gt;
+    &lt;div class="circle" style="left:265px;top:25px;"  id="c1">&lt;/div&gt;
+    &lt;div class="circle" style="left:265px;top:325px;" id="c4">&lt;/div&gt;
+    &lt;div class="circle" style="left:265px;top:625px;" id="c7">&lt;/div&gt;
+    &lt;div class="circle" style="left:567px;top:25px;;" id="c2">&lt;/div&gt;
+    &lt;div class="circle" style="left:567px;top:325px;" id="c5">&lt;/div&gt;
+    &lt;div class="circle" style="left:567px;top:625px;" id="c8">&lt;/div&gt;
+    &lt;div class="circle" style="left:867px;top:25px;"  id="c3">&lt;/div&gt;
+    &lt;div class="circle" style="left:867px;top:325px;" id="c6">&lt;/div&gt;
+    &lt;div class="circle" style="left:867px;top:625px;" id="c9">&lt;/div&gt;
+    &lt;p draggable="true" class="stone1" style="left:120px;top:325px;"  id="1"&gt;&lt;/p&gt;
+    &lt;p draggable="true" class="stone1" style="left:120px;top:325px;"  id="2"&gt;&lt;/p&gt;
+    &lt;p draggable="true" class="stone1" style="left:120px;top:325px;"  id="3"&gt;&lt;/p&gt;
+    &lt;p draggable="true" class="stone2" style="left:1035px;top:325px;" id="4"&gt;&lt;/p&gt;
+    &lt;p draggable="true" class="stone2" style="left:1035px;top:325px;" id="5"&gt;&lt;/p&gt;
+    &lt;p draggable="true" class="stone2" style="left:1035px;top:325px;" id="6"&gt;&lt;/p&gt;
+    &lt;script type="text/javascript" src="/home/ayah/Desktop/trains/1player.js"&gt;
+    &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;'
+initial_node.state={"c1":0,"c2":0,"c3":0,"c4":0,"c5":0,"c6":0,"c7":0,"c8":0,"c9":0};
+initial_node.id={"c1":0,"c2":0,"c3":0,"c4":0,"c5":0,"c6":0,"c7":0,"c8":0,"c9":0};
+initial_node["actionto"]=0;
+initial_node["cost"]=0;
+initial_node["actionid"]=0;
+count=0;
+computer_play();
+
+}
+function check_win(state)
+{
+if(state["c1"]==state["c2"] && state["c1"]==state["c3"] && state["c1"]!=0)
+{
+return state["c1"];
+}
+else if(state["c4"]==state["c5"] && state["c4"]==state["c6"] && state["c4"]!=0)
+{
+return state["c4"];
+}
+else if(state["c7"]==state["c8"] && state["c7"]==state["c9"] && state["c7"]!=0)
+{
+return state["c7"];
+}
+else if(state["c1"]==state["c4"] && state["c1"]==state["c7"] && state["c1"]!=0)
+{
+return state["c1"];
+}
+else if(state["c2"]==state["c5"] && state["c2"]==state["c8"] && state["c2"]!=0)
+{
+return state["c2"];
+}
+else if(state["c3"]==state["c6"] && state["c3"]==state["c9"] && state["c3"]!=0)
+{
+return state["c3"];
+}
+else if(state["c1"]==state["c5"] && state["c1"]==state["c9"] && state["c1"]!=0)
+{
+return state["c1"];
+}
+else if(state["c3"]==state["c5"] && state["c3"]==state["c7"] && state["c3"]!=0)
+{
+return state["c3"];
+}
+return 0;
+
+}
+function valid(idTran,idTarget)
+{
+//from idTran to idTarget
+if (idTran=="c1" && (idTarget=="c2" || idTarget=="c4" ) )
+return true;
+else if (idTran=="c2" && (idTarget=="c1" || idTarget=="c3" || idTarget=="c5") )
+return true;
+else if (idTran=="c3" && (idTarget=="c2" || idTarget=="c6") )
+return true;
+else if (idTran=="c4" && (idTarget=="c1" || idTarget=="c5" || idTarget=="c7") )
+return true;
+else if (idTran=="c5" && (idTarget=="c2" || idTarget=="c4" || idTarget=="c6" || idTarget=="c8") )
+return true;
+else if (idTran=="c6" && (idTarget=="c3" || idTarget=="c5" || idTarget=="c9") )
+return true;
+else if (idTran=="c7" && (idTarget=="c4" || idTarget=="c8") )
+return true;
+else if (idTran=="c8" && (idTarget=="c5" || idTarget=="c7" || idTarget=="c9") )
+return true;
+else if (idTran=="c9" && (idTarget=="c6" || idTarget=="c8") )
+return true;
+
+return false;
+}
+function terminal_test(n)
+{
+var win=check_win(n.state);
+if (win==1 || win==2 || n.cost==depth)
+return true;
+return false;
+}
+function win_counter(s,char0,char1)
+{
+//s:state
+var c=0;
+if ((char0==s["c1"] || char0==s["c2"] || char0==s["c3"]) && (char1!=s["c1"] && char1!=s["c2"] && char1!=s["c3"]))
+c+=1;
+if ((char0==s["c4"] || char0==s["c5"] || char0==s["c6"]) && (char1!=s["c4"] && char1!=s["c5"] && char1!=s["c6"]))
+c+=1;
+if ((char0==s["c7"] || char0==s["c8"] || char0==s["c9"]) && (char1!=s["c7"] && char1!=s["c8"] && char1!=s["c9"]))
+c+=1;
+if ((char0==s["c1"] || char0==s["c4"] || char0==s["c7"]) && (char1!=s["c1"] && char1!=s["c4"] && char1!=s["c7"]))
+c+=1;
+if ((char0==s["c2"] || char0==s["c5"] || char0==s["c8"]) && (char1!=s["c2"] && char1!=s["c5"] && char1!=s["c8"]))
+c+=1;
+if ((char0==s["c3"] || char0==s["c6"] || char0==s["c9"]) && (char1!=s["c3"] && char1!=s["c6"] && char1!=s["c9"]))
+c+=1;
+if ((char0==s["c1"] || char0==s["c5"] || char0==s["c9"]) && (char1!=s["c1"] && char1!=s["c5"] && char1!=s["c9"]))
+c+=1;
+if ((char0==s["c3"] || char0==s["c5"] || char0==s["c7"]) && (char1!=s["c3"] && char1!=s["c5"] && char1!=s["c7"]))
+c+=1;
+return c;
+}
+function Evaluation(state)
+{
+if(check_win(state)==1)
+return 100;
+else if(check_win(state)==2)
+return -100;
+else
+{
+var X_value=win_counter(state,1,2);
+var O_value=win_counter(state,2,1);
+return X_value-O_value;
+}
+}
+function MinMax_Decision(n)
+{
+var [newn,v]=MaxValue(n);
+return newn;
+}
+function MaxValue(n)
+{
+if (terminal_test(n))
+{return [n,Evaluation(n.state)];}
+var v=-1000;
+var select_node=n;
+var nodes=Successors(n,1);
+var len=nodes.length;
+for (var i=0;i&lt;len;i++)
+{
+var n0=nodes[i];
+var [node,max]=MinValue(n0)
+if (max>v)
+{
+select_node=n0;
+v=max;}
+}
+return [select_node,v];
+}
+function MinValue(n)
+{
+if (terminal_test(n))
+return [n,Evaluation(n.state)];
+var v=1000;
+var select_node=n;
+var nodes=Successors(n,2);
+var len=nodes.length;
+for (var i=0;i&lt;len;i++)
+{
+var n0=nodes[i];
+var [node,min]=MaxValue(n0);
+if (min&lt;v)
+{
+select_node=n0;
+v=min;}
+}
+return [select_node,v];
+}
+function Successors(n,c)
+{
+var child=[];
+if(n.cost+count<=5)
+{
+id=(n.cost+count)/2+1;
+if(n.state["c1"]==0)
+{child.push(copy(n,"c1","c0",id,c));}
+if(n.state["c2"]==0)
+{child.push(copy(n,"c2","c0",id,c));}
+if(n.state["c3"]==0)
+{child.push(copy(n,"c3","c0",id,c));}
+if(n.state["c4"]==0)
+{child.push(copy(n,"c4","c0",id,c));}
+if(n.state["c5"]==0)
+{child.push(copy(n,"c5","c0",id,c));}
+if(n.state["c6"]==0)
+{child.push(copy(n,"c6","c0",id,c));}
+if(n.state["c7"]==0)
+{child.push(copy(n,"c7","c0",id,c));}
+if(n.state["c8"]==0)
+{child.push(copy(n,"c8","c0",id,c));}
+if(n.state["c9"]==0)
+{child.push(copy(n,"c9","c0",id,c));}
+}
+else
+{
+if(n.state["c1"]==c)
+{
+var id=initial_node.id["c1"];
+if(n.state["c2"]==0)
+child.push(copy(n,"c2","c1",id,c));
+if (n.state["c4"]==0)
+child.push(copy(n,"c4","c1",id,c));
+}
+if(n.state["c2"]==c)
+{
+var id=initial_node.id["c2"];
+if(n.state["c1"]==0)
+child.push(copy(n,"c1","c2",id,c));
+if (n.state["c3"]==0)
+child.push(copy(n,"c3","c2",id,c));
+if (n.state["c5"]==0)
+child.push(copy(n,"c5","c2",id,c));
+}
+if(n.state["c3"]==c)
+{
+var id=initial_node.id["c3"];
+if(n.state["c2"]==0)
+child.push(copy(n,"c2","c3",id,c));
+if (n.state["c6"]==0)
+child.push(copy(n,"c6","c3",id,c));
+}
+if(n.state["c4"]==c)
+{
+var id=initial_node.id["c4"];
+if(n.state["c1"]==0)
+child.push(copy(n,"c1","c4",id,c));
+if (n.state["c5"]==0)
+child.push(copy(n,"c5","c4",id,c));
+if (n.state["c7"]==0)
+child.push(copy(n,"c7","c4",id,c));
+}
+if(n.state["c5"]==c)
+{
+var id=initial_node.id["c5"];
+if(n.state["c2"]==0)
+child.push(copy(n,"c2","c5",id,c));
+if (n.state["c4"]==0)
+child.push(copy(n,"c4","c5",id,c));
+if (n.state["c6"]==0)
+child.push(copy(n,"c6","c5",id,c));
+if (n.state["c8"]==0)
+child.push(copy(n,"c8","c5",id,c));
+}
+if(n.state["c6"]==c)
+{
+var id=initial_node.id["c6"];
+if(n.state["c3"]==0)
+child.push(copy(n,"c3","c6",id,c));
+if (n.state["c5"]==0)
+child.push(copy(n,"c5","c6",id,c));
+if (n.state["c9"]==0)
+child.push(copy(n,"c9","c6",id,c));
+}
+if(n.state["c7"]==c)
+{
+  var id=initial_node.id["c7"];
+if(n.state["c4"]==0)
+child.push(copy(n,"c4","c7",id,c));
+if (n.state["c8"]==0)
+child.push(copy(n,"c8","c7",id,c));
+}
+if(n.state["c8"]==c)
+{
+  var id=initial_node.id["c8"];
+if(n.state["c7"]==0)
+child.push(copy(n,"c7","c8",id,c));
+if (n.state["c9"]==0)
+child.push(copy(n,"c9","c8",id,c));
+if (n.state["c5"]==0)
+child.push(copy(n,"c5","c8",id,c));
+}
+if(n.state["c9"]==c)
+{
+  var id=initial_node.id["c9"];
+if(n.state["c6"]==0)
+child.push(copy(n,"c6","c9",id,c));
+if (n.state["c8"]==0)
+child.push(copy(n,"c8","c9",id,c));
+}
+}
+return child;
+}
+function copy(n,actionTo,actionFrom,id,c)
+{
+var new_state=[];
+var new_id=[];
+new_state["c1"]=n.state["c1"];
+new_state["c2"]=n.state["c2"];
+new_state["c3"]=n.state["c3"];
+new_state["c4"]=n.state["c4"];
+new_state["c5"]=n.state["c5"];
+new_state["c6"]=n.state["c6"];
+new_state["c7"]=n.state["c7"];
+new_state["c8"]=n.state["c8"];
+new_state["c9"]=n.state["c9"];
+
+new_id["c1"]=n.id["c1"];
+new_id["c2"]=n.id["c2"];
+new_id["c3"]=n.id["c3"];
+new_id["c4"]=n.id["c4"];
+new_id["c5"]=n.id["c5"];
+new_id["c6"]=n.id["c6"];
+new_id["c7"]=n.id["c7"];
+new_id["c8"]=n.id["c8"];
+new_id["c9"]=n.id["c9"];
+
+var n0=[];
+n0.actionto=actionTo;
+n0.actionid=id;
+
+new_state[actionTo]=c;
+new_id[actionTo]=id;
+if(actionFrom!="c0")
+{
+new_state[actionFrom]=0;
+new_id[actionFrom]=0;
+}
+n0["id"]=new_id;
+n0["cost"]=n.cost+1;
+n0["state"]=new_state;
+return n0;
+}
+function computer_play()
+{
+var action,id;
+var node=MinMax_Decision(initial_node);
+action=node.actionto;
+id=node.actionid;
+initial_node.cost=0;
+var stone=document.getElementById(id);
+var actionto=document.getElementById(action);
+if(count%2==0)
+{
+stone.style.left=actionto.style.left;
+stone.style.top=parseInt(actionto.style.top)-16+"px";
+actionto.appendChild(stone);
+initial_node.state=node.state;
+initial_node.id=node.id;
+count++;
+}
+
+}
+document.addEventListener("dragstart", function(event) {
+event.dataTransfer.setData("p", event.target.id);
+
+});
+document.addEventListener("dragover", function(event) {
+event.preventDefault();
+});
+document.addEventListener("drop", function(event) {
+event.preventDefault();
+if ( event.target.className == "circle" )
+{
+var data = event.dataTransfer.getData("p");
+var x=document.getElementById(data);
+if((data=="4" || data=="5" || data=="6") && count%2!=0 && count<=5)
+{
+x.style.left=event.target.style.left;
+x.style.top=parseInt(event.target.style.top)-16+"px";
+event.target.appendChild(x);
+initial_node.state[x.parentNode.id]=2;
+initial_node.id[x.parentNode.id]=parseInt(data);
+count++;
+}
+else if (count>=6)
+{
+var idTran=x.parentNode.id;
+var idTarget=event.target.id;
+var v=valid(idTran,idTarget);
+if (v)
+{
+if((data=="4" || data=="5" || data=="6") && count%2!=0)
+{
+initial_node.state[x.parentNode.id]=0;
+initial_node.id[x.parentNode.id]=0;
+x.style.left=event.target.style.left;
+x.style.top=parseInt(event.target.style.top)-16+"px";
+event.target.appendChild(x);
+initial_node.state[x.parentNode.id]=2;
+initial_node.id[x.parentNode.id]=parseInt(data);
+count++;}
+}
+}
+var win=check_win(initial_node.state);
+if(win==1)
+{
+document.getElementById("win").innerHTML='&lt;p class="win"&gt;Green player win&lt;/p&gt;';
+setTimeout(new_game,2000);
+}
+else if(win==2)
+{
+document.getElementById("win").innerHTML='&lt;p class="win"&gt;Red player win&lt;/p&gt;';
+setTimeout(new_game,2000);
+}
+computer_play();
+
+var win=check_win(initial_node.state);
+if(win==1)
+{
+document.getElementById("win").innerHTML='&lt;p class="win"&gt;Green player win&lt;/p&gt;';
+setTimeout(new_game,2000);
+}
+else if(win==2)
+{
+document.getElementById("win").innerHTML='&lt;p class="win"&gt;Red player win&lt;/p&gt;';
+setTimeout(new_game,2000);
+}
+}
+});
+computer_play();
+</pre>
+</div>
+
+<div style="background:#000000;margin:5%;border-width:5px;border-style:solid;border-color:#FF6600;">
+  <p style="color:#FF6600;font-size:1.5em;text-align:center;">TicTacToe Game (one player)</p>
+  <hr style="margin-bottom:0px">
+  <ul class="nav nav-tabs">
+    <li id="xo_html_tab" class="active"><a style="color:#FF6600;">HTML</a></li>
+    <li id="xo_css_tab"><a style="color:#FF6600;">CSS</a></li>
+    <li id="xo_js_tab"><a style="color:#FF6600;">JS</a></li>
+  </ul>
+  <pre id="xo_html" style="background:#000000;color:#ffffff;font-size:1em;">
+    <iframe src="xo.mp4" style="float:right;"></iframe>
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="en" dir="ltr"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Ayah Alrifai  &lt;/title&gt;
+&lt;link rel="stylesheet" type="text/css" href="xo.css"&gt;
+&lt;/head&gt;
+&lt;body class="bg"&gt;
+&lt;div id="test"&gt;&lt;/div&gt;
+&lt;div id="result"&gt;
+&lt;b&gt;
+&lt;div id="computer"&gt;computer:0&lt;/div&gt;
+---
+&lt;div id="player"&gt;player:0&lt;/div&gt;
+&lt;div onclick="play(event)" class="start"&gt;&gt;restart&lt;&lt;/div&gt;
+&lt;b&gt;
+&lt;/div&gt;
+&lt;div class="main"&gt;
+&lt;div class="H" style="top:200px;"&gt;&lt;/div&gt;
+&lt;div class="H" style="top:300px;"&gt;&lt;/div&gt;
+&lt;div class="V" style="left:200px;"&gt;&lt;/div&gt;
+&lt;div class="V" style="left:300px;"&gt;&lt;/div&gt;
+&lt;div class="box" id="c1" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c2" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c3" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c4" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c5" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c6" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c7" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c8" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;div class="box" id="c9" onclick="play(event)" &gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="xo.js"&gt;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+  <pre id="xo_css" style="background:#000000;color:#ffffff;font-size:1em;">
+    <iframe src="xo.mp4" style="float:right;"></iframe>
+.main
+{
+position:fixed;
+top:84px;
+left:360px;
+}
+.H
+{ position:absolute;
+width: 300px;
+height: 10px;
+left:100px;
+background-color: #000000;
+}
+.V
+{position:absolute;
+width: 10px;
+height: 300px;
+top:100px;
+background-color: #000000;}
+.box
+{
+position:absolute;
+width:90px;
+height:90px;
+}
+#c1
+{
+top:110px;
+left:110px;
+}
+#c2
+{
+top:110px;
+left:210px;
+}
+#c3
+{
+top:110px;
+left:310px;
+}
+#c4
+{
+top:210px;
+left:110px;
+}
+#c5
+{
+top:210px;
+left:210px;
+}
+#c6
+{
+top:210px;
+left:310px;
+}
+#c7
+{
+top:310px;
+left:110px;
+}
+#c8
+{
+top:310px;
+left:210px;
+}
+#c9
+{
+top:310px;
+left:310px;
+}
+#result
+{
+position:fixed;
+top:50px;
+left:440px;
+font-size:2em;
+}
+.bg
+{
+  background: -webkit-radial-gradient(top left,#7554AA,#439277,#7554AA)
+}
+.start
+{
+  padding-top:20px;
+  padding-left:115px;
+  cursor:pointer;
+  color: #000000;
+  text-shadow: 5px 5px 2px #439277;
+}
+#computer
+{
+  text-shadow: 5px 5px 2px #000000;
+display:inline;
+color:#00FF00;
+}
+#player
+{
+  text-shadow: 5px 5px 2px #000000;
+display:inline;
+color:#FF0000;
+}
+  </pre>
+  <pre id="xo_js" style="background:#000000;color:#ffffff;font-size:1em;">
+    <iframe src="xo.mp4" style="float:right;"></iframe>
+    var initial_node=[];
+  var state=[]
+  state["c1"]=' ';state["c2"]=' ';state["c3"]=' ';state["c4"]=' ';state["c5"]=' ';state["c6"]=' ';
+  state["c7"]=' ';state["c8"]=' ';state["c9"]=' ';
+  initial_node["state"]=state;
+  initial_node["action"]=0;
+  initial_node["cost"]=0;
+  var depth=4;
+  var countX=0;
+  var countO=0;
+  var X='&lt;img src="xgreen.png" alt="X" width="90" height="90" /&gt;';
+  var O='&lt;img src="ored.png" alt="O" width="90" height="90" /&gt;';
+  var ids=["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
+  var count=0;
+  var agree=true;
+  function clear_board()
+  {
+    var state=[]
+    state["c1"]=' ';state["c2"]=' ';state["c3"]=' ';state["c4"]=' ';state["c5"]=' ';state["c6"]=' ';
+    state["c7"]=' ';state["c8"]=' ';state["c9"]=' ';
+  initial_node["state"]=state;
+  initial_node["cost"]=0;
+  initial_node["action"]=0;
+  for(var i=0;i&lt;9;i++)
+  {
+    var id=ids[i];
+  var box=document.getElementById(id);
+  box.innerHTML="";
+  }
+  var computer=document.getElementById("computer");
+  var player=document.getElementById("player");
+  computer.innerHTML="computer:"+countX;
+  player.innerHTML="player:"+countO;
+  }
+
+  function draw_board()
+  {
+  for(var i=0 ;i&lt;9;i++)
+  { var id=ids[i]
+  var box=document.getElementById(id);
+  if(initial_node.state[id]=="X")
+  {
+  box.innerHTML=X;
+  }
+  else if(initial_node.state[id]=="O")
+  {
+  box.innerHTML=O;
+  }
+  else
+  {
+  box.innerHTML=" ";
+  }
+  }
+  var computer=document.getElementById("computer");
+  var player=document.getElementById("player");
+  computer.innerHTML="computer:"+countX;
+  player.innerHTML="player:"+countO;
+  }
+
+  function check_win(state)
+  {
+  if (state["c1"]==state["c2"] && state["c1"]==state["c3"] && state["c1"]!=' ')
+  {
+  if(state["c1"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c4"]==state["c5"] && state["c4"]==state["c6"] && state["c4"]!=' ')
+  {
+  if(state["c4"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c7"]==state["c8"] && state["c7"]==state["c9"] && state["c7"]!=' ')
+  {
+  if(state["c7"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c1"]==state["c4"] && state["c1"]==state["c7"] && state["c1"]!=' ')
+  {
+  if(state["c1"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c2"]==state["c5"] && state["c2"]==state["c8"] && state["c2"]!=' ')
+  {
+  if(state["c2"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c3"]==state["c6"] && state["c3"]==state["c9"] && state["c3"]!=' ')
+  {
+  if(state["c3"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c1"]==state["c5"]&& state["c1"]==state["c9"] && state["c1"]!=' ')
+  {
+  if(state["c1"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else if (state["c3"]==state["c5"] && state["c3"]==state["c7"] && state["c3"]!=' ')
+  {
+  if(state["c3"]=='X')
+  return 1;
+  else
+  return -1;
+  }
+  else
+  return 0;
+  }
+
+  function check_draw(state)
+  {
+
+  if (
+state["c1"]!=' ' && state["c2"]!=' ' && state["c3"]!=' ' &&
+state["c4"]!=' ' && state["c5"]!=' ' && state["c6"]!=' ' &&
+state["c7"]!=' ' && state["c8"]!=' ' && state["c9"]!=' ' )
+  return 1;
+  return 0;
+  }
+
+  function terminal_test(n)
+  {
+  var win=check_win(n.state);
+  var draw=check_draw(n.state);
+  if (win==1 || win==-1 || draw==1 || n.cost==depth)
+  return true;
+  return false;
+  }
+
+  function win_counter(s,char0,char1)
+  {
+  var c=0;
+  var bool=[0,0,0,0,0,0,0,0]
+  if ((char0==s["c1"] || char0==s["c2"] || char0==s["c3"]) && (char1!=s["c1"] && char1!=s["c2"] && char1!=s["c3"]))
+  c+=1;
+  if ((char0==s["c4"] || char0==s["c5"] || char0==s["c6"]) && (char1!=s["c4"] && char1!=s["c5"] && char1!=s["c6"]))
+  c+=1;
+  if ((char0==s["c7"] || char0==s["c8"] || char0==s["c9"]) && (char1!=s["c7"] && char1!=s["c8"] && char1!=s["c9"]))
+  c+=1;
+  if ((char0==s["c1"] || char0==s["c4"] || char0==s["c7"]) && (char1!=s["c1"] && char1!=s["c4"] && char1!=s["c7"]))
+  c+=1;
+  if ((char0==s["c2"] || char0==s["c5"] || char0==s["c8"]) && (char1!=s["c2"] && char1!=s["c5"] && char1!=s["c8"]))
+  c+=1;
+  if ((char0==s["c3"] || char0==s["c6"] || char0==s["c9"]) && (char1!=s["c3"] && char1!=s["c6"] && char1!=s["c9"]))
+  c+=1;
+  if ((char0==s["c1"] || char0==s["c5"] || char0==s["c9"]) && (char1!=s["c1"] && char1!=s["c5"] && char1!=s["c9"]))
+  c+=1;
+  if ((char0==s["c3"] || char0==s["c5"] || char0==s["c7"]) && (char1!=s["c3"] && char1!=s["c5"] && char1!=s["c7"]))
+  c+=1;
+  return c;
+  }
+
+  function Evaluation(state)
+  {
+  if(check_win(state)==1)
+  return 100;
+  else if(check_win(state)==-1)
+  return -100;
+  else
+  {
+  var X_value=win_counter(state,'X','O');
+  var O_value=win_counter(state,'O','X');
+  return X_value-O_value;
+  }
+  }
+
+  function Successors(n,c)
+  {
+  var child=[];
+  for (var i=0 ; i&lt;9;i++)
+  {
+  var id=ids[i];
+  if (n.state[id]==' ')
+  {
+  var new_state=[];
+  new_state["c1"]=n.state["c1"];
+  new_state["c2"]=n.state["c2"];
+  new_state["c3"]=n.state["c3"];
+  new_state["c4"]=n.state["c4"];
+  new_state["c5"]=n.state["c5"];
+  new_state["c6"]=n.state["c6"];
+  new_state["c7"]=n.state["c7"];
+  new_state["c8"]=n.state["c8"];
+  new_state["c9"]=n.state["c9"];
+  new_state[id]=c;
+  var n0=[];
+  n0["state"]=new_state;
+  n0["action"]=id;
+  n0["cost"]=n.cost+1;
+  child.push(n0);
+  }
+  }
+  return child;
+  }
+
+  function MinMax_Decision(n)
+  {
+  var [newn,v]=MaxValue(n);
+  return newn.action;
+  }
+
+  function MaxValue(n)
+  {
+  if (terminal_test(n))
+  {
+  return [n,Evaluation(n.state)];
+  }
+  var v=-1000;
+  var select_node=n;
+  var nodes=Successors(n,'X');
+  for (var i=0;i&lt;nodes.length;i++)
+  {
+  var n0=nodes[i];
+  var [node,max]=MinValue(n0)
+  if (max&gt;=v)
+  {
+  select_node=n0;
+  v=max;}
+  }
+  return [select_node,v];
+  }
+
+  function MinValue(n)
+  {
+  if (terminal_test(n))
+  return [n,Evaluation(n.state)];
+  var v=1000;
+  var select_node=n;
+  var nodes=Successors(n,'O');
+  for (var i=0;i&tl;nodes.length;i++)
+  {
+    var n0=nodes[i];
+  [node,min]=MaxValue(n0);
+  if (min<=v)
+  {select_node=n0;
+  v=min;}
+  }
+  return [select_node,v];
+  }
+
+function play(event)
+  {
+  if(count==0)
+  { clear_board();}
+  if(count%2!=0)
+  {
+  var pos="c0";
+  var keys=[0,0]
+  keys[0]=event.clientX;
+  keys[1]=event.clientY;
+  if (keys[0]>=470 && keys[0]<=550 && keys[1]>=194 && keys[1]<=274)
+  pos="c1";
+  else if (keys[0]>=570 && keys[0]<=650 && keys[1]>=194 && keys[1]<=274)
+  pos="c2";
+  else if (keys[0]>=670 && keys[0]<=750 && keys[1]>=194 && keys[1]<=274)
+  pos="c3";
+  else if (keys[0]>=470 && keys[0]<=550 && keys[1]>=294 && keys[1]<=374)
+  pos="c4";
+  else if (keys[0]>=570 && keys[0]<=650 && keys[1]>=294 && keys[1]<=374)
+  pos="c5";
+  else if (keys[0]>=670 && keys[0]<=750 && keys[1]>=294 && keys[1]<=374)
+  pos="c6";
+  else if (keys[0]>=470 && keys[0]<=550 && keys[1]>=394 && keys[1]<=474)
+  pos="c7";
+  else if (keys[0]>=570 && keys[0]<=650 && keys[1]>=394 && keys[1]<=474)
+  pos="c8";
+  else if (keys[0]>=670 && keys[0]<=750 && keys[1]>=394 && keys[1]<=474)
+  pos="c9";
+  if (pos!="c0" && initial_node.state[pos]==' ')
+  {
+  initial_node.state[pos]='O';
+  initial_node.cost=0;
+  initial_node.action=pos;
+  draw_board();
+  count+=1;
+  }}
+
+  if (count%2==0)
+  {
+
+  var action=MinMax_Decision(initial_node);
+  initial_node.state[action]='X';
+  initial_node.action=action;
+  initial_node.cost=0;
+  draw_board();
+  count+=1;
+
+  }
+
+  var check_win0=check_win(initial_node.state);
+  var check_draw0=check_draw(initial_node.state)
+  if((check_win0==1 || check_win0==-1 || check_draw0==1 ))
+  {
+  if (check_win0==1)
+  countX+=1;
+  else if (check_win0==-1)
+  countO+=1;
+  draw_board();
+  count=0;
+  }
+}
+play();
+</pre>
+</div>
+
+<footer class="page-footer font-small teal pt-4" style="background:#000000;color:#FF6600;padding:5px;">
+  <div class="container-fluid text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <h5 class="text-uppercase font-weight-bold">Connect Us</h5>
+        <p>
+          <a href="https://www.facebook.com/Ayah.alrifai97" ><img src="facebook.png" width="50px" height="50px"></a>
+          <a href="https://www.instagram.com/ayah.alrifai/?hl=en" style="margin-left:25px;"><img src="Instagram_AppIcon_Aug2017.png" width="50px" height="50px"></a>
+          <a href="mailto: alrefayayah@gmail.com" style="margin-left:25px;"><img src="Gmail_Icon.png" width="50px" height="50px"></a>
+        </p>
+      </div>
+      <div class="col-md-6 mb-md-0 mb-3">
+        <h5 class="text-uppercase font-weight-bold">Thank you for visit my page</h5>
+        <p>this page create by using html, css, js, bootstrap, jquery.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr class="clearfix w-100 d-md-none pb-3">
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://www.facebook.com/messages/t/Ayah.alrifai97">Ayah K Alrifai</a>
+  </div>
+</footer>
+
+
+</body>
+</html>
